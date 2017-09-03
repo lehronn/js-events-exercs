@@ -3,7 +3,8 @@ var list = document.getElementById('list'),
     add = document.getElementById('addElem');
 add.addEventListener('click', function() {
   var element = document.createElement('li');
-  element.innerHTML = 'item ';
-  //list.getElementsByTagName('li').length;
+  var listElements = list.getElementsByTagName('li');
+  console.log(listElements.length);
+  element.innerHTML = 'item ' + listElements.length;
   list.appendChild(element);
 });
